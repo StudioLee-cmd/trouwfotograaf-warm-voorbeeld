@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Test</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: #F6F1E5; }
+
+    .spacer { height: 50vh; display: flex; align-items: center; justify-content: center; font-size: 24px; opacity: 0.3; }
+
+    .cards-section {
+      padding: 40px 24px;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .card {
+      max-width: 850px;
+      margin: 0 auto;
+      border-radius: 20px;
+      padding: 56px 48px;
+      position: sticky;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    }
+
+    /* All cards stick — margin-top creates scroll delay for each new card */
+    .card-1 { background: #97ABAF; color: #F6F1E5; top: 80px;  z-index: 1; }
+    .card-2 { background: #374840; color: #F6F1E5; top: 120px; z-index: 2; margin-top: 80vh; }
+    .card-3 { background: #E1DED6; color: #000;    top: 160px; z-index: 3; margin-top: 80vh; }
+
+    /* Spacer at end keeps ALL cards sticky until the next section covers them */
+    .end-spacer { height: 80vh; }
+
+    /* Next section covers the cards */
+    .next-section { background: #24332E; color: #F6F1E5; padding: 120px 48px; position: relative; z-index: 10; text-align: center; }
+    .next-section h2 { font-size: 48px; font-weight: 500; }
+
+    .badge { display: inline-block; padding: 8px 20px; border-radius: 6px; background: rgba(255,255,255,0.15); font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px; }
+    .quote { font-size: clamp(22px, 4vw, 42px); font-weight: 500; line-height: 1.2; }
+    .author { margin-top: 32px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; }
+  </style>
+</head>
+<body>
+  <div class="spacer">Scroll down to see cards stack</div>
+
+  <section class="cards-section">
+    <div class="card card-1">
+      <span class="badge">No. 1</span>
+      <p class="quote">"Testimonial one sticks first and stays stuck the entire time."</p>
+      <p class="author">Person One — Role</p>
+    </div>
+    <div class="card card-2">
+      <span class="badge">No. 2</span>
+      <p class="quote">"Testimonial two scrolls in and covers card one."</p>
+      <p class="author">Person Two — Role</p>
+    </div>
+    <div class="card card-3">
+      <span class="badge">No. 3</span>
+      <p class="quote">"Testimonial three scrolls in and covers card two. All stay stuck."</p>
+      <p class="author">Person Three — Role</p>
+    </div>
+
+    <div class="end-spacer"></div>
+  </section>
+
+  <div class="next-section">
+    <h2>This section slides over all the cards</h2>
+  </div>
+
+  <div class="spacer">More content below</div>
+  <div class="spacer">End of page</div>
+
+  <!-- StudioLee credit badge -->
+  <a href="https://www.studiolee.nl" target="_blank" rel="noopener" style="position:fixed;bottom:14px;right:14px;z-index:9999;background:rgba(0,0,0,.85);color:#fff;padding:9px 18px;border-radius:99px;font-family:system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s,background .2s;display:inline-flex;align-items:center;gap:6px" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#cdfb52';this.style.color='#0a0a0a'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(0,0,0,.85)';this.style.color='#fff'">Speciaal gemaakt voor trouwfotograafs door StudioLee.nl &nearr;</a>
+
+</body>
+</html>

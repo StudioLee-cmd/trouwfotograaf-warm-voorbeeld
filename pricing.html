@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bekijk onze transparante tarieven. Kies het pakket dat bij jou past — geen verrassingen, geen verborgen kosten.">
+  <title>Tarieven — LiefdeBlik Voorbeeld</title>
+
+  <!-- Google Fonts: DM Sans + Lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <!-- PLACEHOLDER: Voeg favicon toe -->
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       ============================================================ -->
+  <header class="nav" role="banner">
+    <a href="index.html" class="nav__brand">LiefdeBlik Voorbeeld</a>
+
+    <!-- Desktop nav links -->
+    <nav class="nav__links" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="about.html">Over Ons</a>
+      <a href="blog.html">Blog</a>
+      <a href="pricing.html" class="is-active" aria-current="page">Tarieven</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav__toggle menu-btn" aria-label="Open menu" aria-expanded="false">
+      Menu
+    </button>
+  </header>
+
+  <!-- Mobile / Overlay Menu -->
+  <div class="menu-overlay" role="dialog" aria-label="Navigatiemenu">
+    <div class="menu-overlay__nav">
+      <a href="index.html" class="menu-overlay__link">Home</a>
+      <a href="about.html" class="menu-overlay__link">Over Ons</a>
+      <a href="blog.html" class="menu-overlay__link">Blog</a>
+      <a href="pricing.html" class="menu-overlay__link">Tarieven</a>
+      <a href="contact.html" class="menu-overlay__link">Contact</a>
+
+      <div class="menu-overlay__social">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="menu-overlay__aside">
+      <!-- PLACEHOLDER: 4 sfeerbeelden in grid -->
+      <div style="background-color: var(--color-dusty-teal); border-radius: var(--radius-lg);"></div>
+      <div style="background-color: var(--color-stone); border-radius: var(--radius-lg);"></div>
+      <div style="background-color: var(--color-stone); border-radius: var(--radius-lg);"></div>
+      <div style="background-color: var(--color-dusty-teal); border-radius: var(--radius-lg);"></div>
+    </div>
+    <button class="menu-overlay__close menu-close" aria-label="Sluit menu">Sluiten</button>
+  </div>
+
+  <!-- Nav spacer -->
+  <div class="nav-spacer"></div>
+
+
+  <!-- ============================================================
+       SECTION 1 — PAGE HERO
+       ============================================================ -->
+  <section class="pricing-header reveal-on-scroll" style="background-color: var(--color-bg-warm); padding: var(--sp-9) 0 var(--sp-7);">
+    <div class="container text-center">
+      <p class="subheading">Pakketten &amp; Prijzen</p>
+      <h1>Tarieven</h1>
+      <p style="max-width: 600px; margin: 0 auto; text-align: center;">Transparante prijzen, geen verrassingen.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 2 — PRICING TOGGLE + CARDS
+       Alle prijzen excl. BTW
+       ============================================================ -->
+  <section class="pricing-section reveal-on-scroll">
+    <div class="container">
+
+      <!-- Monthly / Yearly Toggle -->
+      <div class="pricing-toggle" role="group" aria-label="Kies betaalperiode">
+        <span class="pricing-toggle__label is-active" id="label-monthly">Maandelijks</span>
+
+        <label class="pricing-toggle__switch" for="pricing-toggle-input" aria-label="Schakel tussen maandelijks en jaarlijks">
+          <input type="checkbox" id="pricing-toggle-input" class="pricing-toggle sr-only" role="switch" aria-checked="false">
+        </label>
+
+        <span class="pricing-toggle__label" id="label-yearly">Jaarlijks
+          <span class="pricing-toggle__save">Bespaar 20%</span>
+        </span>
+      </div>
+
+      <!-- Pricing Cards — 3 tiers -->
+      <!-- NOTE: Alle prijzen excl. BTW -->
+      <div class="pricing-grid reveal-on-scroll reveal-stagger">
+
+        <!-- TIER 1: Starter -->
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <p class="pricing-card__description">Ideaal om mee te beginnen. De basis die je nodig hebt om te starten.</p>
+
+          <!-- Monthly price -->
+          <div class="monthly-price">
+            <div class="pricing-card__price">&euro;49 <span>/maand</span></div>
+          </div>
+          <!-- Yearly price (hidden by default via JS) -->
+          <div class="yearly-price" style="display: none;">
+            <div class="pricing-card__price">&euro;39 <span>/maand</span></div>
+          </div>
+
+          <p class="pricing-card__period"><!-- Alle prijzen excl. BTW -->Per maand, maandelijks opzegbaar</p>
+
+          <div class="pricing-card__divider"></div>
+
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">Feature 1: Basisfunctionaliteit</li>
+            <li class="pricing-card__feature">Feature 2: E-mail support</li>
+            <li class="pricing-card__feature">Feature 3: Maandelijkse rapportage</li>
+            <li class="pricing-card__feature">Feature 4: 1 gebruiker</li>
+            <li class="pricing-card__feature">Feature 5: Standaard dashboard</li>
+          </ul>
+
+          <a href="contact.html" class="btn btn--secondary">Kies Starter <span class="btn-arrow">&rarr;</span></a>
+        </div>
+
+        <!-- TIER 2: Professional (FEATURED / RECOMMENDED) -->
+        <div class="pricing-card pricing-card--featured">
+          <span class="pricing-card__badge">Meest gekozen</span>
+          <h3>Professional</h3>
+          <p class="pricing-card__description" style="color: var(--color-cream); opacity: 0.75;">Voor groeiende bedrijven die meer willen bereiken. Onze populairste keuze.</p>
+
+          <!-- Monthly price -->
+          <div class="monthly-price">
+            <div class="pricing-card__price" style="color: var(--color-cream);">&euro;99 <span>/maand</span></div>
+          </div>
+          <!-- Yearly price -->
+          <div class="yearly-price" style="display: none;">
+            <div class="pricing-card__price" style="color: var(--color-cream);">&euro;79 <span>/maand</span></div>
+          </div>
+
+          <p class="pricing-card__period" style="color: var(--color-cream); opacity: 0.5;"><!-- Alle prijzen excl. BTW -->Per maand, jaarlijks gefactureerd</p>
+
+          <div class="pricing-card__divider"></div>
+
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">Alles uit Starter, plus:</li>
+            <li class="pricing-card__feature">Feature 6: Prioriteit support</li>
+            <li class="pricing-card__feature">Feature 7: Wekelijkse rapportage</li>
+            <li class="pricing-card__feature">Feature 8: 5 gebruikers</li>
+            <li class="pricing-card__feature">Feature 9: Geavanceerd dashboard</li>
+            <li class="pricing-card__feature">Feature 10: Integraties</li>
+            <li class="pricing-card__feature">Feature 11: Persoonlijke onboarding</li>
+            <li class="pricing-card__feature">Feature 12: Aangepaste branding</li>
+          </ul>
+
+          <a href="contact.html" class="btn btn--outline">Kies Professional <span class="btn-arrow">&rarr;</span></a>
+        </div>
+
+        <!-- TIER 3: Enterprise -->
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p class="pricing-card__description">Voor gevestigde organisaties met uitgebreide behoeften. Alles onbeperkt.</p>
+
+          <!-- Monthly price -->
+          <div class="monthly-price">
+            <div class="pricing-card__price">&euro;199 <span>/maand</span></div>
+          </div>
+          <!-- Yearly price -->
+          <div class="yearly-price" style="display: none;">
+            <div class="pricing-card__price">&euro;159 <span>/maand</span></div>
+          </div>
+
+          <p class="pricing-card__period"><!-- Alle prijzen excl. BTW -->Per maand, jaarlijks gefactureerd</p>
+
+          <div class="pricing-card__divider"></div>
+
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">Alles uit Professional, plus:</li>
+            <li class="pricing-card__feature">Feature 13: Dedicated accountmanager</li>
+            <li class="pricing-card__feature">Feature 14: Dagelijkse rapportage</li>
+            <li class="pricing-card__feature">Feature 15: Onbeperkt gebruikers</li>
+            <li class="pricing-card__feature">Feature 16: API-toegang</li>
+            <li class="pricing-card__feature">Feature 17: Custom integraties</li>
+            <li class="pricing-card__feature">Feature 18: SLA-garantie</li>
+            <li class="pricing-card__feature">Feature 19: Telefoon support</li>
+            <li class="pricing-card__feature">Feature 20: White-label optie</li>
+            <li class="pricing-card__feature">Feature 21: Strategisch advies</li>
+          </ul>
+
+          <a href="contact.html" class="btn btn--secondary">Kies Enterprise <span class="btn-arrow">&rarr;</span></a>
+        </div>
+
+      </div><!-- /.pricing-grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 3 — FEATURE COMPARISON TABLE
+       Alle prijzen excl. BTW
+       ============================================================ -->
+  <section class="section-pad bg-cream reveal-on-scroll">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--sp-8);">
+        <p class="subheading">Vergelijk pakketten</p>
+        <h2>Functionaliteiten per pakket</h2>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; max-width: var(--container-max); margin: 0 auto; border-collapse: collapse; font-family: var(--font-ui); font-size: 15px;">
+          <thead>
+            <tr style="border-bottom: 2px solid rgba(0,0,0,0.1);">
+              <th style="text-align: left; padding: var(--sp-4) var(--sp-5); font-weight: 500; font-size: 16px;">Functionaliteit</th>
+              <th style="text-align: center; padding: var(--sp-4) var(--sp-5); font-weight: 500; font-size: 16px;">Starter</th>
+              <th style="text-align: center; padding: var(--sp-4) var(--sp-5); font-weight: 500; font-size: 16px; color: var(--color-mid-green);">Professional</th>
+              <th style="text-align: center; padding: var(--sp-4) var(--sp-5); font-weight: 500; font-size: 16px;">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Basisfunctionaliteit</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 2 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">E-mail support</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 3 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Rapportage</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center;">Maandelijks</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center;">Wekelijks</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center;">Dagelijks</td>
+            </tr>
+            <!-- Row 4 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Aantal gebruikers</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center;">1</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center;">5</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center;">Onbeperkt</td>
+            </tr>
+            <!-- Row 5 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Geavanceerd dashboard</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 6 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Integraties</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 7 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Persoonlijke onboarding</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 8 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Aangepaste branding</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 9 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">API-toegang</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 10 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Dedicated accountmanager</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 11 -->
+            <tr style="border-bottom: 1px solid rgba(0,0,0,0.06);">
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">SLA-garantie</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+            <!-- Row 12 -->
+            <tr>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: left;">Telefoon support</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; opacity: 0.3;">&#10007;</td>
+              <td style="padding: var(--sp-4) var(--sp-5); text-align: center; color: var(--color-mid-green);">&#10003;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="text-align: center; font-size: var(--fs-small); opacity: 0.5; margin-top: var(--sp-5); font-family: var(--font-ui);">
+        <!-- Alle prijzen excl. BTW -->
+        Alle genoemde prijzen zijn exclusief BTW.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 4 — FAQ ACCORDION
+       ============================================================ -->
+  <section class="faq reveal-on-scroll">
+    <div class="faq__header">
+      <p class="subheading">Veelgestelde vragen</p>
+      <h2>Alles wat je wilt weten</h2>
+    </div>
+
+    <div class="faq__list">
+
+      <!-- FAQ 1 -->
+      <div class="faq__item faq-item">
+        <button class="faq__question faq-question" aria-expanded="false">
+          Kan ik op elk moment opzeggen?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__answer faq-answer" role="region">
+          <div class="faq__answer-inner">
+            <p>Ja, bij maandelijkse betaling kun je op elk moment opzeggen. Bij jaarlijkse betaling loopt je abonnement tot het einde van de betaalperiode. Er zijn geen opzegkosten.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq__item faq-item">
+        <button class="faq__question faq-question" aria-expanded="false">
+          Zijn er extra kosten bovenop de genoemde prijzen?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__answer faq-answer" role="region">
+          <div class="faq__answer-inner">
+            <!-- Alle prijzen excl. BTW -->
+            <p>Nee, de genoemde prijzen zijn alles-inclusief. Alle prijzen zijn exclusief BTW (21%). Er zijn geen verborgen kosten of onverwachte toeslagen.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq__item faq-item">
+        <button class="faq__question faq-question" aria-expanded="false">
+          Kan ik tussentijds upgraden of downgraden?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__answer faq-answer" role="region">
+          <div class="faq__answer-inner">
+            <p>Absoluut. Je kunt op elk moment upgraden naar een hoger pakket. Bij downgraden gaat de wijziging in aan het einde van je huidige betaalperiode. Het verschil wordt naar rato verrekend.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq__item faq-item">
+        <button class="faq__question faq-question" aria-expanded="false">
+          Is er een gratis proefperiode beschikbaar?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__answer faq-answer" role="region">
+          <div class="faq__answer-inner">
+            <p>Ja, je kunt aantal dagen gratis uitproberen zonder verplichtingen. Je hoeft geen betaalgegevens in te voeren om te starten. Na de proefperiode kies je zelf of je wilt doorgaan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq__item faq-item">
+        <button class="faq__question faq-question" aria-expanded="false">
+          Welk pakket is geschikt voor mijn bedrijf?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__answer faq-answer" role="region">
+          <div class="faq__answer-inner">
+            <p>Starter is ideaal voor kleine bedrijven die net beginnen. Professional past bij groeiende bedrijven die meer functionaliteit nodig hebben. Enterprise is ontworpen voor grotere organisaties met specifieke wensen. Twijfel je? Neem gerust contact op voor persoonlijk advies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq__item faq-item">
+        <button class="faq__question faq-question" aria-expanded="false">
+          Hoe werkt de betaling?
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__answer faq-answer" role="region">
+          <div class="faq__answer-inner">
+            <p>We werken met automatische incasso of factuur. Betaling vindt maandelijks of jaarlijks plaats, afhankelijk van je gekozen plan. Je ontvangt altijd vooraf een factuur per e-mail. Alle gangbare betaalmethoden worden geaccepteerd.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 5 — CTA SECTION
+       ============================================================ -->
+  <section class="cta-banner--solid reveal-on-scroll" style="background-color: var(--color-bg-panel); padding: var(--sp-10) 0;">
+    <div class="cta-banner__content" style="max-width: 700px; margin: 0 auto; text-align: center; padding: 0 var(--sp-5);">
+      <p class="subheading" style="color: var(--color-mid-green);">Persoonlijk advies</p>
+      <h2 style="color: var(--color-text); margin-bottom: var(--sp-5);">Nog vragen?</h2>
+      <p style="color: var(--color-text); opacity: 0.8; margin-bottom: var(--sp-6); text-align: center;">Twijfel je welk pakket het beste bij je past? Neem vrijblijvend contact met ons op. We denken graag met je mee.</p>
+      <a href="contact.html" class="btn btn--primary btn--lg">Neem contact op <span class="btn-arrow">&rarr;</span></a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+
+      <!-- Column 1: Brand + email -->
+      <div>
+        <div class="footer__brand">LiefdeBlik Voorbeeld</div>
+        <a href="mailto:tim@studiolee.nl" class="footer__email">tim@studiolee.nl</a>
+      </div>
+
+      <!-- Column 2: Contact -->
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li></li>
+          <li><a href="mailto:tim@studiolee.nl">tim@studiolee.nl</a></li>
+          <li>Straatnaam 1</li>
+          <li>1234 AB Plaatsnaam</li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Navigation -->
+      <div class="footer__col">
+        <h4>Pagina's</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pricing.html">Tarieven</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span class="footer__copyright">&copy; 2026 LiefdeBlik Voorbeeld. Alle rechten voorbehouden.</span>
+      <div class="footer__legal">
+        <a href="privacy.html">Privacybeleid</a>
+        <a href="legal.html">Disclaimer</a>
+        <a href="algemene-voorwaarden.html">Algemene Voorwaarden</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+  <!-- Enhanced pricing toggle: sync switch visual + labels with checkbox -->
+  <script>
+    (function() {
+      var toggle = document.getElementById('pricing-toggle-input');
+      var switchEl = toggle ? toggle.closest('.pricing-toggle__switch') : null;
+      var labelMonthly = document.getElementById('label-monthly');
+      var labelYearly = document.getElementById('label-yearly');
+
+      if (!toggle || !switchEl) return;
+
+      function updateToggleVisual() {
+        var isYearly = toggle.checked;
+        if (isYearly) {
+          switchEl.classList.add('is-yearly');
+          if (labelMonthly) labelMonthly.classList.remove('is-active');
+          if (labelYearly) labelYearly.classList.add('is-active');
+        } else {
+          switchEl.classList.remove('is-yearly');
+          if (labelMonthly) labelMonthly.classList.add('is-active');
+          if (labelYearly) labelYearly.classList.remove('is-active');
+        }
+      }
+
+      toggle.addEventListener('change', updateToggleVisual);
+
+      // Allow clicking labels to toggle
+      if (labelMonthly) {
+        labelMonthly.addEventListener('click', function() {
+          toggle.checked = false;
+          toggle.dispatchEvent(new Event('change'));
+        });
+      }
+      if (labelYearly) {
+        labelYearly.addEventListener('click', function() {
+          toggle.checked = true;
+          toggle.dispatchEvent(new Event('change'));
+        });
+      }
+
+      // Set initial visual state
+      updateToggleVisual();
+    })();
+  </script>
+
+
+  <!-- StudioLee credit badge -->
+  <a href="https://www.studiolee.nl" target="_blank" rel="noopener" style="position:fixed;bottom:14px;right:14px;z-index:9999;background:rgba(0,0,0,.85);color:#fff;padding:9px 18px;border-radius:99px;font-family:system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s,background .2s;display:inline-flex;align-items:center;gap:6px" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#cdfb52';this.style.color='#0a0a0a'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(0,0,0,.85)';this.style.color='#fff'">Speciaal gemaakt voor trouwfotograafs door StudioLee.nl &nearr;</a>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiefdeBlik Voorbeeld — Over Ons</title>
+  <meta name="description" content="Leer meer over ons team, onze missie en de waarden die ons drijven — max 160 tekens">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       1. HEADER / NAVIGATIE
+       ============================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand-name">LiefdeBlik Voorbeeld</a>
+
+      <nav class="desktop-nav" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">Over Ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pricing.html">Tarieven</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="menuOpen" aria-label="Open menu">
+        Menu
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="brand-name">LiefdeBlik Voorbeeld</a>
+      <button class="mobile-menu-close" id="menuClose" aria-label="Sluit menu">&times;</button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobiele navigatie">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active" aria-current="page">Over Ons</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="pricing.html">Tarieven</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <!-- ============================================
+       2. HERO — OVER ONS
+       ============================================ -->
+  <section class="hero" style="padding-bottom: var(--sp-8);">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="subheading">OVER ONS</span>
+        <h1 class="hero-headline">Ons Verhaal</h1>
+        <p class="hero-subheading">Achter elk project staat een team dat gelooft in verbinding, kwaliteit en persoonlijke aandacht.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       3. VERHAAL — 2-KOLOM BEELD + TEKST
+       ============================================ -->
+  <section class="about reveal-on-scroll" id="verhaal">
+    <div class="about__grid">
+
+      <div class="about__image-wrap">
+        <img src="images/about-story.jpg" alt="Het LiefdeBlik Voorbeeld team aan het werk" loading="lazy">
+      </div>
+
+      <div class="about__panel">
+        <span class="subheading">ONS VERHAAL</span>
+        <h2>Hoe Het Begon</h2>
+        <p>
+          Het begon met een simpele overtuiging: elk bedrijf verdient een partner die niet alleen
+          meedenkt, maar ook meevoelt. Wat startte als een klein initiatief vanuit een thuiskantoor,
+          groeide uit tot een hecht team van specialisten met een gedeelde passie voor creativiteit
+          en resultaat.
+        </p>
+        <p>
+          Wij geloven dat de beste resultaten ontstaan wanneer strategie en menselijkheid samenkomen.
+          Daarom investeren we niet alleen in de nieuwste technieken, maar vooral in relaties.
+          Elke klant is uniek, en dat verdient een aanpak die net zo persoonlijk is als uw ambities.
+        </p>
+        <a href="contact.html" class="btn btn--primary">Neem Contact Op</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       4. WAARDEN / MISSIE — 3 KAARTEN
+       ============================================ -->
+  <section class="features reveal-on-scroll" style="background-color: var(--color-bg-warm);">
+    <div class="container" style="text-align: center; margin-bottom: var(--sp-8);">
+      <span class="subheading">ONZE WAARDEN</span>
+      <h2>Waar Wij Voor Staan</h2>
+    </div>
+
+    <div class="features__grid reveal-stagger">
+
+      <article class="feature-card">
+        <div class="feature-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h3>Persoonlijke Aanpak</h3>
+        <p>Wij zien u niet als nummer maar als partner. Elke samenwerking begint met luisteren, begrijpen en vertrouwen opbouwen. Uw succes is ons succes.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3>Transparantie</h3>
+        <p>Geen verborgen kosten, geen vage beloftes. Wij communiceren open over voortgang, resultaten en verwachtingen. U weet altijd precies waar u aan toe bent.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Meetbaar Resultaat</h3>
+        <p>Creativiteit zonder strategie is kunst. Strategie zonder data is gokken. Wij combineren beide zodat elke euro die u investeert aantoonbaar rendeert.</p>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       5. TEAM — GRID VAN TEAMLEDEN
+       ============================================ -->
+  <section class="section-pad reveal-on-scroll" id="team">
+    <div class="container" style="text-align: center; margin-bottom: var(--sp-8);">
+      <span class="subheading">ONS TEAM</span>
+      <h2>De Mensen Achter Het Merk</h2>
+    </div>
+
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap);" class="reveal-stagger team-grid">
+
+        <!-- Teamlid 1 -->
+        <article class="team-card" style="text-align: center;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3 / 4; margin-bottom: var(--sp-5);">
+            <img src="images/team-1.jpg" alt="Foto teamlid" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-size: 20px; margin-bottom: var(--sp-1);">Tim Hartog</h3>
+          <span class="subheading" style="display: block; margin-bottom: var(--sp-3); color: var(--color-dusty-teal);">Oprichter & Hoofdbouwer</span>
+          <p style="font-size: 15px; opacity: 0.75; text-align: center;">Met meer dan tien jaar ervaring in digitale marketing combineert zij visie met actie.</p>
+        </article>
+
+        <!-- Teamlid 2 -->
+        <article class="team-card" style="text-align: center;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3 / 4; margin-bottom: var(--sp-5);">
+            <img src="images/team-2.jpg" alt="Foto teamlid" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-size: 20px; margin-bottom: var(--sp-1);">Tim Hartog</h3>
+          <span class="subheading" style="display: block; margin-bottom: var(--sp-3); color: var(--color-dusty-teal);">Projectleider</span>
+          <p style="font-size: 15px; opacity: 0.75; text-align: center;">Hij ziet schoonheid in eenvoud en vertaalt merkverhalen naar beelden die blijven hangen.</p>
+        </article>
+
+        <!-- Teamlid 3 -->
+        <article class="team-card" style="text-align: center;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3 / 4; margin-bottom: var(--sp-5);">
+            <img src="images/team-3.jpg" alt="Foto teamlid" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-size: 20px; margin-bottom: var(--sp-1);">Tim Hartog</h3>
+          <span class="subheading" style="display: block; margin-bottom: var(--sp-3); color: var(--color-dusty-teal);">Voorman Timmerwerk</span>
+          <p style="font-size: 15px; opacity: 0.75; text-align: center;">Data is zijn tweede taal. Hij zorgt ervoor dat uw website niet alleen mooi is, maar ook gevonden wordt.</p>
+        </article>
+
+        <!-- Teamlid 4 -->
+        <article class="team-card" style="text-align: center;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 3 / 4; margin-bottom: var(--sp-5);">
+            <img src="images/team-4.jpg" alt="Foto teamlid" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3 style="font-size: 20px; margin-bottom: var(--sp-1);">Tim Hartog</h3>
+          <span class="subheading" style="display: block; margin-bottom: var(--sp-3); color: var(--color-dusty-teal);">Werkvoorbereider</span>
+          <p style="font-size: 15px; opacity: 0.75; text-align: center;">Zij houdt alle ballen in de lucht en zorgt dat elk project op tijd en binnen budget wordt opgeleverd.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       6. STATISTIEKEN — TELLERS
+       ============================================ -->
+  <section class="section-pad reveal-on-scroll" style="background-color: var(--color-bg-dark); color: var(--color-text-light);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap); text-align: center;" class="stats-grid">
+
+        <div class="stat-item">
+          <span class="count-up" data-target="150" data-suffix="+" style="font-family: var(--font-heading); font-weight: 500; font-size: clamp(40px, 6vw, 64px); line-height: 1; display: block; color: var(--color-dusty-teal);">0</span>
+          <span style="font-family: var(--font-ui); font-size: var(--fs-button); text-transform: uppercase; letter-spacing: var(--ls-uppercase); opacity: 0.7; margin-top: var(--sp-3); display: block;">Klanten</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="count-up" data-target="5" data-suffix="+" style="font-family: var(--font-heading); font-weight: 500; font-size: clamp(40px, 6vw, 64px); line-height: 1; display: block; color: var(--color-dusty-teal);">0</span>
+          <span style="font-family: var(--font-ui); font-size: var(--fs-button); text-transform: uppercase; letter-spacing: var(--ls-uppercase); opacity: 0.7; margin-top: var(--sp-3); display: block;">Jaar Ervaring</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="count-up" data-target="98" data-suffix="%" style="font-family: var(--font-heading); font-weight: 500; font-size: clamp(40px, 6vw, 64px); line-height: 1; display: block; color: var(--color-dusty-teal);">0</span>
+          <span style="font-family: var(--font-ui); font-size: var(--fs-button); text-transform: uppercase; letter-spacing: var(--ls-uppercase); opacity: 0.7; margin-top: var(--sp-3); display: block;">Tevredenheid</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="count-up" data-target="500" data-suffix="+" style="font-family: var(--font-heading); font-weight: 500; font-size: clamp(40px, 6vw, 64px); line-height: 1; display: block; color: var(--color-dusty-teal);">0</span>
+          <span style="font-family: var(--font-ui); font-size: var(--fs-button); text-transform: uppercase; letter-spacing: var(--ls-uppercase); opacity: 0.7; margin-top: var(--sp-3); display: block;">Projecten Afgerond</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       7. CTA — SAMENWERKEN
+       ============================================ -->
+  <section class="cta-banner cta-banner--solid reveal-on-scroll">
+    <div class="cta-banner__content">
+      <span class="subheading" style="color: var(--color-mid-green);">VOLGENDE STAP</span>
+      <h2>Klaar om samen te werken?</h2>
+      <p>Laten we kennismaken. Vertel ons over uw project en ontdek hoe wij u kunnen helpen groeien.</p>
+      <a href="contact.html" class="btn btn--primary">Plan een Gesprek</a>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       8. FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-col--brand">
+        <a href="index.html" class="brand-name">LiefdeBlik Voorbeeld</a>
+        <p class="footer-tagline">Schrijf u in voor onze nieuwsbrief</p>
+        <form class="footer-signup" action="#" method="post">
+          <label for="footerEmail" class="sr-only">E-mailadres</label>
+          <input type="email" id="footerEmail" name="email" placeholder="Uw e-mailadres" required>
+          <button type="submit" class="btn btn--small">Verstuur</button>
+        </form>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <h4>Contact</h4>
+        <address>
+          <p><a href="mailto:tim@studiolee.nl">tim@studiolee.nl</a></p>
+          <p></p>
+          <p>Bouwlaan 12<br>3500 BV Utrecht</p>
+        </address>
+      </div>
+
+      <div class="footer-col footer-col--nav">
+        <h4>Pagina's</h4>
+        <nav aria-label="Footer navigatie">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Over Ons</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pricing.html">Tarieven</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 LiefdeBlik Voorbeeld. Alle rechten voorbehouden.</p>
+      <nav class="footer-legal" aria-label="Juridische links">
+        <a href="#">Privacy</a>
+        <a href="#">Algemene Voorwaarden</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+
+  <!-- StudioLee credit badge -->
+  <a href="https://www.studiolee.nl" target="_blank" rel="noopener" style="position:fixed;bottom:14px;right:14px;z-index:9999;background:rgba(0,0,0,.85);color:#fff;padding:9px 18px;border-radius:99px;font-family:system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s,background .2s;display:inline-flex;align-items:center;gap:6px" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#cdfb52';this.style.color='#0a0a0a'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(0,0,0,.85)';this.style.color='#fff'">Speciaal gemaakt voor trouwfotograafs door StudioLee.nl &nearr;</a>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lees onze laatste artikelen over onderwerp. Praktische tips, diepgaande gidsen en meer.">
+  <title>Blog — LiefdeBlik Voorbeeld</title>
+
+  <!-- Google Fonts: DM Sans + Lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <!-- PLACEHOLDER: Voeg favicon toe -->
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       ============================================================ -->
+  <header class="nav" role="banner">
+    <a href="index.html" class="nav__brand">LiefdeBlik Voorbeeld</a>
+
+    <!-- Desktop nav links (hidden on mobile, shown in overlay) -->
+    <nav class="nav__links" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="about.html">Over Ons</a>
+      <a href="blog.html" class="is-active" aria-current="page">Blog</a>
+      <a href="pricing.html">Tarieven</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav__toggle menu-btn" aria-label="Open menu" aria-expanded="false">
+      Menu
+    </button>
+  </header>
+
+  <!-- Mobile / Overlay Menu -->
+  <div class="menu-overlay" role="dialog" aria-label="Navigatiemenu">
+    <div class="menu-overlay__nav">
+      <a href="index.html" class="menu-overlay__link">Home</a>
+      <a href="about.html" class="menu-overlay__link">Over Ons</a>
+      <a href="blog.html" class="menu-overlay__link">Blog</a>
+      <a href="pricing.html" class="menu-overlay__link">Tarieven</a>
+      <a href="contact.html" class="menu-overlay__link">Contact</a>
+
+      <div class="menu-overlay__social">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="menu-overlay__aside">
+      <!-- PLACEHOLDER: 4 sfeerbeelden in grid -->
+      <div style="background-color: var(--color-dusty-teal); border-radius: var(--radius-lg);"></div>
+      <div style="background-color: var(--color-stone); border-radius: var(--radius-lg);"></div>
+      <div style="background-color: var(--color-stone); border-radius: var(--radius-lg);"></div>
+      <div style="background-color: var(--color-dusty-teal); border-radius: var(--radius-lg);"></div>
+    </div>
+    <button class="menu-overlay__close menu-close" aria-label="Sluit menu">Sluiten</button>
+  </div>
+
+  <!-- Nav spacer -->
+  <div class="nav-spacer"></div>
+
+
+  <!-- ============================================================
+       SECTION 1 — PAGE HERO
+       ============================================================ -->
+  <section class="blog-header reveal-on-scroll">
+    <div class="container">
+      <p class="subheading">Kennis &amp; Inspiratie</p>
+      <h1>Blog</h1>
+      <p>Ontdek onze laatste artikelen, praktische tips en diepgaande gidsen. Alles wat je nodig hebt om onderwerp naar een hoger niveau te tillen.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 2 — CLUSTER OVERVIEW (4 topic clusters)
+       ============================================================ -->
+  <section class="section-pad" style="padding-top: 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); margin-bottom: var(--sp-8);" class="reveal-on-scroll reveal-stagger cluster-overview">
+
+        <!-- Cluster 1 -->
+        <button class="feature-card hover-lift" data-cluster-filter="cluster-strategie" style="cursor: pointer; border: none; text-align: center;">
+          <div class="feature-card__icon">
+            <!-- PLACEHOLDER: icoon strategie -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          </div>
+          <h4>Strategie</h4>
+          <p style="font-size: 14px; opacity: 0.6; text-align: center;">3 artikelen</p>
+        </button>
+
+        <!-- Cluster 2 -->
+        <button class="feature-card hover-lift" data-cluster-filter="cluster-techniek" style="cursor: pointer; border: none; text-align: center;">
+          <div class="feature-card__icon">
+            <!-- PLACEHOLDER: icoon techniek -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h4>Techniek</h4>
+          <p style="font-size: 14px; opacity: 0.6; text-align: center;">3 artikelen</p>
+        </button>
+
+        <!-- Cluster 3 -->
+        <button class="feature-card hover-lift" data-cluster-filter="cluster-inspiratie" style="cursor: pointer; border: none; text-align: center;">
+          <div class="feature-card__icon">
+            <!-- PLACEHOLDER: icoon inspiratie -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 12 18.469c-.94 0-1.818.38-2.464 1.02l-.024.024"/></svg>
+          </div>
+          <h4>Inspiratie</h4>
+          <p style="font-size: 14px; opacity: 0.6; text-align: center;">2 artikelen</p>
+        </button>
+
+        <!-- Cluster 4 -->
+        <button class="feature-card hover-lift" data-cluster-filter="cluster-nieuws" style="cursor: pointer; border: none; text-align: center;">
+          <div class="feature-card__icon">
+            <!-- PLACEHOLDER: icoon nieuws -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          </div>
+          <h4>Nieuws</h4>
+          <p style="font-size: 14px; opacity: 0.6; text-align: center;">1 artikel</p>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Responsive: cluster grid 2x2 on mobile, 4-col on desktop -->
+    <style>
+      .cluster-overview {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+      @media (max-width: 768px) {
+        .cluster-overview {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+    </style>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 3 — FILTER BUTTONS
+       ============================================================ -->
+  <div class="blog-filters reveal-on-scroll">
+    <button class="blog-filter-btn filter-btn is-active" data-category="all">Alle Artikelen</button>
+    <button class="blog-filter-btn filter-btn" data-category="cluster-strategie">Strategie</button>
+    <button class="blog-filter-btn filter-btn" data-category="cluster-techniek">Techniek</button>
+    <button class="blog-filter-btn filter-btn" data-category="cluster-inspiratie">Inspiratie</button>
+    <button class="blog-filter-btn filter-btn" data-category="cluster-nieuws">Nieuws</button>
+  </div>
+
+
+  <!-- ============================================================
+       SECTION 4 — ARTICLE GRID
+       9 articles: 1 pillar (spans 2 cols) + 8 regular
+       ============================================================ -->
+  <section class="reveal-on-scroll">
+    <div class="blog-grid">
+
+      <!-- PILLAR ARTICLE — spans 2 columns -->
+      <article class="article-card blog-item" data-category="cluster-strategie" style="grid-column: span 2;">
+        <div class="article-card__image">
+          <!-- PLACEHOLDER: pillar afbeelding 16:9 -->
+          <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-mid-green), var(--color-dusty-teal)); aspect-ratio: 16/9; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"></div>
+        </div>
+        <div class="article-card__body">
+          <div style="display: flex; gap: var(--sp-2); align-items: center; margin-bottom: var(--sp-3);">
+            <span class="article-card__badge article-card__badge--primary">Pillar</span>
+            <span class="article-card__badge">Strategie</span>
+          </div>
+          <h3 class="article-card__title" style="font-size: 26px; line-height: 1.2;">De Complete Gids voor Onderwerp: Alles Wat Je Moet Weten in 2026</h3>
+          <p class="article-card__excerpt">Dit uitgebreide artikel behandelt alle aspecten van onderwerp. Van de basis tot geavanceerde strategieen — ontdek hoe je gewenst resultaat bereikt met bewezen methoden en praktische tips die je direct kunt toepassen.</p>
+          <span class="article-card__meta">1 april 2026 &bull; 12 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-strategie">
+        <div class="article-card__image">
+          <!-- PLACEHOLDER: blog afbeelding 16:9 -->
+          <div style="width: 100%; height: 100%; background-color: var(--color-stone); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge">Strategie</span>
+          <h4 class="article-card__title">5 Strategieen om Doel te Bereiken</h4>
+          <p class="article-card__excerpt">Ontdek de vijf meest effectieve strategieen die doelgroep gebruiken om resultaat te behalen. Inclusief praktijkvoorbeelden.</p>
+          <span class="article-card__meta">28 maart 2026 &bull; 6 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-techniek">
+        <div class="article-card__image">
+          <div style="width: 100%; height: 100%; background-color: var(--color-dusty-teal); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge article-card__badge--accent">Techniek</span>
+          <h4 class="article-card__title">Hoe Werkt Technisch Onderwerp? Een Helder Overzicht</h4>
+          <p class="article-card__excerpt">In dit artikel leggen we stap voor stap uit hoe technisch onderwerp werkt en waarom het belangrijk is voor doelgroep.</p>
+          <span class="article-card__meta">25 maart 2026 &bull; 8 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-inspiratie">
+        <div class="article-card__image">
+          <div style="width: 100%; height: 100%; background-color: var(--color-bg-panel); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge">Inspiratie</span>
+          <h4 class="article-card__title">Succesverhaal: Hoe Klant Resultaat Behaalde</h4>
+          <p class="article-card__excerpt">Lees hoe klant dankzij methode/dienst in tijdperiode concreet resultaat wist te bereiken. Een inspirerend verhaal.</p>
+          <span class="article-card__meta">22 maart 2026 &bull; 5 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-techniek">
+        <div class="article-card__image">
+          <div style="width: 100%; height: 100%; background-color: var(--color-mid-green); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge article-card__badge--accent">Techniek</span>
+          <h4 class="article-card__title">De Beste Tools voor Onderwerp in 2026</h4>
+          <p class="article-card__excerpt">Een vergelijking van de populairste tools voor onderwerp. We bekijken de voor- en nadelen zodat jij de juiste keuze maakt.</p>
+          <span class="article-card__meta">19 maart 2026 &bull; 7 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-strategie">
+        <div class="article-card__image">
+          <div style="width: 100%; height: 100%; background-color: var(--color-bg-warm); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge">Strategie</span>
+          <h4 class="article-card__title">Waarom Actie Essentieel Is voor Doelgroep</h4>
+          <p class="article-card__excerpt">Veel doelgroep onderschatten het belang van actie. In dit artikel laten we zien waarom het een sleutelrol speelt in context.</p>
+          <span class="article-card__meta">15 maart 2026 &bull; 4 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-techniek">
+        <div class="article-card__image">
+          <div style="width: 100%; height: 100%; background-color: var(--color-dusty-teal); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge article-card__badge--accent">Techniek</span>
+          <h4 class="article-card__title">Stap-voor-Stap: Technische Handleiding</h4>
+          <p class="article-card__excerpt">Volg deze stap-voor-stap handleiding om taak succesvol uit te voeren. Met screenshots en praktische tips.</p>
+          <span class="article-card__meta">12 maart 2026 &bull; 9 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-inspiratie">
+        <div class="article-card__image">
+          <div style="width: 100%; height: 100%; background-color: var(--color-stone); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge">Inspiratie</span>
+          <h4 class="article-card__title">Trends in Branche: Dit Verandert er in 2026</h4>
+          <p class="article-card__excerpt">De branche is volop in beweging. Ontdek welke trends dit jaar dominant worden en hoe jij hierop kunt inspelen.</p>
+          <span class="article-card__meta">8 maart 2026 &bull; 6 min leestijd</span>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="article-card blog-item hover-lift" data-category="cluster-nieuws">
+        <div class="article-card__image">
+          <div style="width: 100%; height: 100%; background-color: var(--color-bg-panel); aspect-ratio: 16/10;"></div>
+        </div>
+        <div class="article-card__body">
+          <span class="article-card__badge">Nieuws</span>
+          <h4 class="article-card__title">Nieuw: LiefdeBlik Voorbeeld Lanceert Dienst/Product</h4>
+          <p class="article-card__excerpt">We zijn trots om dienst/product te lanceren. Lees hier wat het inhoudt en hoe het jou kan helpen bij doel.</p>
+          <span class="article-card__meta">5 maart 2026 &bull; 3 min leestijd</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+
+      <!-- Column 1: Brand + email -->
+      <div>
+        <div class="footer__brand">LiefdeBlik Voorbeeld</div>
+        <a href="mailto:tim@studiolee.nl" class="footer__email">tim@studiolee.nl</a>
+      </div>
+
+      <!-- Column 2: Contact -->
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li></li>
+          <li><a href="mailto:tim@studiolee.nl">tim@studiolee.nl</a></li>
+          <li>Straatnaam 1</li>
+          <li>1234 AB Plaatsnaam</li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Navigation -->
+      <div class="footer__col">
+        <h4>Pagina's</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pricing.html">Tarieven</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <span class="footer__copyright">&copy; 2026 LiefdeBlik Voorbeeld. Alle rechten voorbehouden.</span>
+      <div class="footer__legal">
+        <a href="privacy.html">Privacybeleid</a>
+        <a href="legal.html">Disclaimer</a>
+        <a href="algemene-voorwaarden.html">Algemene Voorwaarden</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+  <!-- Cluster card click → activate matching filter button -->
+  <script>
+    document.querySelectorAll('data-cluster-filter').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var cluster = this.getAttribute('data-cluster-filter');
+        var filterBtn = document.querySelector('.filter-btndata-category="' + cluster + '"');
+        if (filterBtn) filterBtn.click();
+
+        // Scroll to filter bar
+        var filterBar = document.querySelector('.blog-filters');
+        if (filterBar) {
+          var headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 0;
+          var top = filterBar.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+
+  <!-- StudioLee credit badge -->
+  <a href="https://www.studiolee.nl" target="_blank" rel="noopener" style="position:fixed;bottom:14px;right:14px;z-index:9999;background:rgba(0,0,0,.85);color:#fff;padding:9px 18px;border-radius:99px;font-family:system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .2s,background .2s;display:inline-flex;align-items:center;gap:6px" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#cdfb52';this.style.color='#0a0a0a'" onmouseout="this.style.transform='translateY(0)';this.style.background='rgba(0,0,0,.85)';this.style.color='#fff'">Speciaal gemaakt voor trouwfotograafs door StudioLee.nl &nearr;</a>
+
+</body>
+</html>
